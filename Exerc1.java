@@ -1,24 +1,43 @@
 import java.util.Scanner;
 
-public class Exerc1 {
+public class Exerc1{
 
     public static void main(String[] args) {
+
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Insira o nome do produto: ");
-        String produto = entrada.next();
+            System.out.print("Digite qual operação deseja(*, /, +, -): ");
+            char operacao = entrada.next().charAt(0);
+         
+            System.out.print("Digite um número: ");
+            float num1 = entrada.nextFloat();
 
-        System.out.print("Insira o modelo do produto: ");
-        String modelo = entrada.next();
+            System.out.print("Digite um número: ");
+            float num2 = entrada.nextFloat();
 
-        System.out.print("Digite o tamanho do produto: ");
-        float tamanho = entrada.nextFloat();
+            double result;
 
-        System.out.print("Digite o valor do produto R$: ");
-        double valor = entrada.nextDouble();
+            switch (operacao) {
 
-        System.out.print("Digite a quantidade: ");
-        int qntd = entrada.nextInt();
+                case '+': result = num1 + num2;
+                System.out.print(result);
+                break;
+                
+                case '-': result = num1 + num2;
+                System.out.print(result);
+                break; 
+
+                case '*': result = num1 * num2;
+                System.out.println(result);
+                break;
+
+                case '/': result = num1 / num2;
+                System.out.println(result);
+                break;
+
+
+            }
     }
-    
+
+
 }
