@@ -1,34 +1,42 @@
 import java.util.Scanner;
-
 public class Exerc2 {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
+        
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Digite a operação desejada: ");
-        char operacao = entrada.nextLine().charAt(0);
+            System.out.print("Insira o valor de seu produto: ");
+            double valor = entrada.nextFloat();
 
-        System.out.print("Digite o primeiro número: ");
-        float num1 = entrada.nextFloat();
+            System.out.println("Em estados diferentes digite (OE)");
 
-        System.out.print("Digite o segundo número: ");
-        float num2 = entrada.nextFloat();
+            System.out.print("Insira o estado de destino: ");
+            String estado = entrada.next();
 
-        float resultado = float;
+            double porcentagem;
 
-        switch (operacao){
-            case '+': resultado = num1 + num2;   
-            break;
-            case '-': resultado = num1 - num2;
-            break; 
-            case '/': resultado = num1 / num2;
-            break; 
-            case '*': resultado = num1 * num2;
-            break;
+            if (estado.equals("MG") || estado.equals("mg") || estado.equals("Minas Gerais") || estado.equals("minas gerais")){
+
+                porcentagem = valor * 0.07 + valor;
+                System.out.println(porcentagem);
+
+            }else if (estado.equals("SP") || estado.equals("sp") || estado.equals("São paulo") || estado.equals("Sao Paulo") || estado.equals("são paulo") || estado.equals("sao paulo")){
+                porcentagem = valor * 0.12 + valor;
+                System.out.println(porcentagem);
+
+            }else if (estado.equals("RJ") || estado.equals("rj") || estado.equals("Rio de Janeiro") || estado.equals("rio de janeiro")){
+
+                porcentagem = valor * 0.15 + valor;
+                System.out.println(porcentagem);
+            
+            } else if (estado.equals("OE")){
+
+                porcentagem = valor * 0.09 + valor;
+                System.out.println(porcentagem);
+            }
+                    
+             
+        
         }
-
-        System.out.print("Seu resultado é: " + resultado);
     
-    }
-
 }
