@@ -33,6 +33,12 @@ public class Exerc2 {
 
                 porcentagem = valor * 0.09 + valor;
                 System.out.println(porcentagem);
+
+            } else if (estado.equals("Mato Grosso do Sul") || estado.equals("mato grosso do sul") || estado.equals("ms") || estado.equals("MS")){
+
+                porcentagem = valor * 0.08 + valor;
+                System.out.println(porcentagem);
+
             }
                     
              
