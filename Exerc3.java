@@ -1,22 +1,16 @@
 import java.util.Scanner;
 
 public class Exerc3 {
-
     public static void main(String[] args) {
-        
-            Scanner entrada = new Scanner(System.in);
-            
-            System.out.print("Digite um número: ");
-            float valor = entrada.nextFloat();
+        Scanner batata = new Scanner(System.in);
 
-            float num;
+        System.out.print("Digite um número: ");
+        int numero = batata.nextInt();
 
-            if (valor % 2 == 0){
-                System.out.println("É par");
-
-            }else if (valor % 2 != 0){
-                System.out.println("É ímpar");}
-
+        long fatorial = 1;
+        for (int i = 1; i <= numero; i++){
+            fatorial = fatorial * i;
+            System.out.println("o fatorial de " + numero + " é " + fatorial);
+        }
     }
-    
 }

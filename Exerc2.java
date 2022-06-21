@@ -1,48 +1,22 @@
 import java.util.Scanner;
+
 public class Exerc2 {
-
     public static void main(String[] args) {
-        
-        Scanner entrada = new Scanner(System.in);
+        Scanner batata = new Scanner(System.in);
 
-            System.out.print("Insira o valor de seu produto: ");
-            double valor = entrada.nextFloat();
+        System.out.print("Digite um número entre 0 e 100: ");
+        int numero = batata.nextInt();
 
-            System.out.println("Em estados diferentes digite (OE)");
+        int resultado = numero % 2;
 
-            System.out.print("Insira o estado de destino: ");
-            String estado = entrada.next();
-
-            double porcentagem;
-
-            if (estado.equals("MG") || estado.equals("mg") || estado.equals("Minas Gerais") || estado.equals("minas gerais")){
-
-                porcentagem = valor * 0.07 + valor;
-                System.out.println(porcentagem);
-
-            }else if (estado.equals("SP") || estado.equals("sp") || estado.equals("São paulo") || estado.equals("Sao Paulo") || estado.equals("são paulo") || estado.equals("sao paulo")){
-                porcentagem = valor * 0.12 + valor;
-                System.out.println(porcentagem);
-
-            }else if (estado.equals("RJ") || estado.equals("rj") || estado.equals("Rio de Janeiro") || estado.equals("rio de janeiro")){
-
-                porcentagem = valor * 0.15 + valor;
-                System.out.println(porcentagem);
-            
-            } else if (estado.equals("OE")){
-
-                porcentagem = valor * 0.09 + valor;
-                System.out.println(porcentagem);
-
-            } else if (estado.equals("Mato Grosso do Sul") || estado.equals("mato grosso do sul") || estado.equals("ms") || estado.equals("MS")){
-
-                porcentagem = valor * 0.08 + valor;
-                System.out.println(porcentagem);
-
-            }
-                    
-             
-        
+        if (numero > 100 && numero < 0){
+            System.out.println("Você passou do limite!!");
         }
-    
+        if (resultado == 0){
+            System.out.println("Número par");
+        }else if (resultado != 0){
+            System.out.println("Número ímpar");
+        }
+
+    }
 }
